@@ -19,3 +19,38 @@ h3{
     text-align: center;
     padding: 5px; 
 }
+.container{
+    background-image: url("../images/bananas.png");
+    padding: 20px;
+    height: 100%;
+}
+.start-col{
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}
+.button-style{
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.qna-style{
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+.qna-border-style{
+    border: 1px solid grey;
+    margin: 5px;
+    z-index: 5;
+}
+/* .hideStartButton{
+    display:hide;
+} */
+
+.modal-title-style{
+    font-family: 'Luckiest Guy', cursive;
+    font-weight: 100;
+    text-align: center;
+}
+

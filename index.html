@@ -3,48 +3,65 @@
     <head>
         <meta charset="UTF-8">
         <title>Trivia Game</title>
-        <link rel="stylesheet" type="text/css" href="reset.css">
+        <!-- <link rel="stylesheet" type="text/css" href="reset.css"> -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
-        <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/style.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="assets/css/style.css">
+        
     </head>
     <body>
-        <div class="container">
+
+        
+<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+<!-- \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+        <div class="container" >
+           
             <div class="row">
                 <div class="col-md-12 heading-wrapper"><h1>Totally Trivial Trivia</h1></div>
                 <!-- close row containing totally trivia game heading -->
             </div>
+            
             <div class="row">
-                <div class="col-md-12"><h3>Time Remaining: </h3></div>
+                <div class="col-md-12" ><h3>Time Remaining: <span id="timer"><strong>00:00</strong></span></h3></div>
             </div>
-            <div class="row" id="qna">
+
+            <div class = "row">
+                <div class="col-md-12 start-col" >
+                    <button type="button" id="start" onclick="this.style.visibility='hidden'" class="btn btn-primary button-style">Start</button>
+                    
+                </div>
+            </div>
+
+            <div class="row qna-style" id="qna">
                 
             </div>
-            <!-- <div class="row">
-                <form class="form-inline">
-                    <fieldset class="form-group" style="border: 1px solid blue">
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                  <input type="radio" id="button-1" class="form-check-input " name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                                  Option one is this and that&mdash;be
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <label class="form-check-label">
-                                  <input type="radio"  class="form-check-input" style="display: inline-block" name="optionsRadios" id="optionsRadios2" value="option2">
-                                  Option two can be s
-                            </label>
-                        </div>
-                    </fieldset>
-                </form>
-                close row containing form
-            </div> -->
+            
             <div class="row" id="submit-row">
                 <div class="col-md-12">
-                    <button id="submit">Submit</button>
+                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="submit">
+                        Submit
+                      </button> -->
+                      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title modal-title-style" id="exampleModalCenterTitle">Score-card</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body" id="score-append">
+                             
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                      <!-- close col -->
                 </div>
+                <!-- close submit-row -->
             </div>
             <!-- close container -->
         </div>
